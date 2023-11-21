@@ -1,0 +1,243 @@
+id: fuzz
+
+name: Fuzz Harnessing
+
+description: |
+  Important Resources:
+  - [LibFuzzer Documentation](https://llvm.org/docs/LibFuzzer.html)
+  - [**OSS-Fuzz**: Statistics and Fuzzing Introspection reports](https://introspector.oss-fuzz.com/projects-overview)
+  - [**OSS-Fuzz**: Setting up a new project](https://google.github.io/oss-fuzz/getting-started/new-project-guide/)
+  - [**OSS-Fuzz**: Ideal integration](https://google.github.io/oss-fuzz/advanced-topics/ideal-integration/)
+  - [**GITHUB**: How to contribute to a project through forking](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
+  - [**Google Blog**: Refreshed OSS-Fuzz rewards](https://security.googleblog.com/2023/02/taking-next-step-oss-fuzz-in-2023.html)
+  - [Efficient Fuzzing Guide](https://chromium.googlesource.com/chromium/src/+/main/testing/libfuzzer/efficient_fuzzing.md)
+  - [Search OSS-Fuzz fuzz drivers](https://github.com/search?q=repo%3Agoogle%2Foss-fuzz+path%3A%2F%5Eprojects%5C%2F%2F++AND+%28language%3AC%2B%2B+OR+language%3AC%29&type=code)
+modules:
+
+  - id: training
+    name: TRAINING
+    description: Learn techniques to improve the code coverage of fuzz driver harnesses
+
+    challenges:
+
+      - id: 1-locate
+        name: Locate Harnesses
+        description: Locate the fuzz harnesses in a project.  Run /challenge/training in Terminal to start.
+
+      - id: 2-change
+        name: Modify a Fuzzing Harness
+        description: Make a change to a fuzzing harness.  Run /challenge/training in Terminal to start.
+
+      - id: 3-broken
+        name: Fix Broken Fuzzing Harness
+        description: Repair a broken fuzzing harness.  Run /challenge/training in Terminal to start.
+
+      - id: 4-parameters
+        name: Initial Parameters
+        description: Increase code coverage by selecting better initial parameters.  Run /challenge/training in Terminal to start.
+
+      - id: 5-calltree
+        name: Improve Coverage Using the Call Tree
+        description: Find a function higher in the call tree that calls this function and fuzz it instead.  Run /challenge/training in Terminal to start.
+
+      - id: 6-split
+        name: Split Into Multiple Harness
+        description: Break large complicated fuzz drivers into multiple individual drivers.  Run /challenge/training in Terminal to start.
+
+      - id: 7-sanitizer
+        name: Correct Sanitizer Specific Problems
+        description: Identify the sanitizer that is crashing and repair it.  Run /challenge/training in Terminal to start.
+
+      - id: 8-seedcorpus
+        name: Implement Seed Corpus
+        description: Implement a seed corpus.  Run /challenge/training in Terminal to start.
+
+      - id: 9-newdriver
+        name: Create New Fuzz Driver
+        description: Search for unreached code within a project and create a simple fuzz driver to increase total project code coverage.  Run /challenge/training in Terminal to start.
+
+      - id: 10-crash
+        name: Diagnose Crash Files
+        description: When compiling ZLIB crashes are produced. Why is this occurring? Run /challenge/training in Terminal to start.
+
+  - id: projects
+    name: OSS-FUZZ PROJECTS
+    description: Improve a OSS-Fuzz driver by 5% or more to achieve the flag
+
+    challenges:
+
+      - id: apache-httpd
+        name: APACHE-HTTPD (14.81%) 48312 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=apache-httpd
+
+      - id: arduinojson
+        name: ARDUINOJSON (48.24%) 3599 loc 
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=arduinojson
+
+      - id: avahi
+        name: AVAHI (32.89%) 2566 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=avahi
+
+      - id: boost
+        name: BOOST (60.81%) 11995 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=boost
+
+      - id: bzip2
+        name: BZIP2 (92.97%) 2661 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=bzip2
+
+      - id: c-ares
+        name: C-ARES (33.77%) 5676 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=c-ares
+
+      - id: casync
+        name: CASYNC (10.01%) 1678 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=casync
+
+      - id: cmake
+        name: CMAKE (62.63%) 7778 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cmake
+
+      - id: cppcheck
+        name: CPPCHECK (26.12%) 79321 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cppcheck
+
+      - id: example
+        name: EXAMPLE (my-api-repo) (100.00%) 20 loc
+        description: Sample OSS-Fuzz project
+
+      - id: fmt
+        name: FMT (83.11%) 5904 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=fmt
+
+      - id: gfwx
+        name: GFWX (84.36%) 1087 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=gfwx
+
+      - id: git
+        name: GIT (9.56%) 183986 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=git
+
+      - id: haproxy
+        name: HAPROXY (1.81%) 106108 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=haproxy
+
+      - id: janus-gateway
+        name: JANUS-GATEWAY (37.48%) 6131 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=janus-gateway
+
+      - id: json
+        name: JSON (72.80%) 8008 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=json
+
+      - id: kamailio
+        name: KAMAILIO (9.19%) 81190 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=kamailio
+
+      - id: lame
+        name: LAME (40.15%) 23539 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lame
+
+      - id: libsodium
+        name: LIBSODIUM (20.67%) 7761 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libsodium
+        
+      - id: libssh
+        name: LIBSSH (37.71%) 26927 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libssh
+        
+      - id: libssh2
+        name: LIBSSH2 (30.37%) 12632 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libssh2
+      
+      - id: libtasn1
+        name: LIBTASN1 (59.15%) 6722 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libtasn1
+      
+      - id: libvnc
+        name: LIBVNC (20.54%) 10793 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libvnc
+      
+      - id: lighttpd
+        name: LIGHTTPD (34.58%) 1310 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lighttpd
+      
+      - id: miniz
+        name: MINIZ (47.67%) 5423 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=miniz
+
+      - id: minizip
+        name: MINIZIP (58.59%) 3639 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=minizip
+        
+      - id: mpg123
+        name: MPG123 (53.14%) 9826 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=mpg123
+
+      - id: ninja
+        name: NINJA (32.26%) 4005 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=ninja
+
+      - id: openjpeg
+        name: OPENJPEG (51.03%) 22939 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openjpeg
+
+      - id: opensips
+        name: OPENSIPS (13.37%) 62114 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=opensips
+
+      - id: openssh
+        name: OPENSSH (35.88%) 27975 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openssh
+
+      - id: pycryptodome
+        name: PYCRYPTODOME (80.19%) 1398 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=pycryptodome
+
+      - id: snappy
+        name: SNAPPY (61.58%) 1502 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=snappy
+
+      - id: tmux
+        name: TMUX (12.78%) 48752 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=tmux
+
+      - id: unrar
+        name: UNRAR (15.16%) 13209 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=unrar
+
+      - id: uriparser
+        name: URIPARSER (78.88%) 4606 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=uriparser
+
+      - id: usbguard
+        name: USBGUARD (39.91%) 3525 loc (no FI report)
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=usbguard
+
+      - id: valijson
+        name: VALIJSON (9.37%) 3566 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=valijson
+
+      - id: vorbis
+        name: VORBIS (35.22%) 8745 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=vorbis
+
+      - id: wasm3
+        name: WASM3 (71.51%) 4107 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=wasm3
+
+      - id: xvid
+        name: XVID (33.47%) 13782 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=xvid
+
+      - id: xz
+        name: XZ (67.87%) 3414 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=xz
+
+      - id: zlib
+        name: ZLIB (69.77%) 5055 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=zlib
+
+      - id: zopfli
+        name: ZOPFLI (92.75%) 2221 loc
+        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=zopfli

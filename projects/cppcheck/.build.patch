@@ -1,0 +1,11 @@
+--- build.sh	2023-09-18 23:46:20.610222373 +0000
++++ build.sh	2023-09-18 23:47:23.250527877 +0000
+@@ -19,6 +19,7 @@
+ 
+ cd $SRC/cppcheck/oss-fuzz
+ make oss-fuzz-client
+-cp oss-fuzz-client $OUT/
++make newfuzzer
++cp oss-fuzz-client newfuzzer $OUT/
+ 
+ 

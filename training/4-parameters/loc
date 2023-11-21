@@ -1,0 +1,18 @@
+#!/opt/pwn.college/bash 
+INITIAL=9
+TARGET=12
+time sudo -H -u hacker bash -c "/challenge/.loc_count $*"
+echo
+echo fuzz-newfuzzer coverage:
+/usr/local/sbin/loc-calc fuzz-newfuzzer
+/usr/local/sbin/announce $INITIAL $? 
+if [ "$?" -ge "$TARGET" ]; then
+    echo
+    echo Congratulations!
+    cat /flag
+fi
+if compgen -G "/out/crash*" > /dev/null; then
+    echo
+    echo "Crashes detected within the /out directory!"
+    echo
+fi

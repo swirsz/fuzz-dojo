@@ -1,0 +1,19 @@
+#!/opt/pwn.college/bash
+rm /out/crash-*
+rm /out/timeout-*
+time sudo -H -u hacker bash -c "/challenge/.loc_count $*"
+if compgen -G "/out/timeout-*" > /dev/null
+then
+    echo
+    echo "Timeouts detected within the /out directory!"
+    echo
+elif compgen -G "/out/crash-*" > /dev/null
+then
+    echo
+    echo "Crashes detected within the /out directory!"
+    echo
+else
+    echo
+    echo Congratulations!  No crashes detected.
+    cat /flag
+fi
