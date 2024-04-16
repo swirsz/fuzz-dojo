@@ -1,0 +1,18 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/eafl
+export PROJECT_NAME=igraph
+export SANITIZER=$1
+[ -z "$SANITIZER" ] && export SANITIZER='none'
+cd $SRC
+
+apt-get update && apt-get install -y cmake bison flex
+
+git clone --branch master  https://github.com/igraph/igraph
+
+cp $SRC/$PROJECT_NAME/fuzzing/build.sh $SRC/
+
+#patch -tuN /src/build.sh -i /challenge/.build.patch -r -
+cd $SRC/$PROJECT_NAME
+
+sudo --preserve-env compile
+drivers
