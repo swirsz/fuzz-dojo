@@ -104,10 +104,6 @@ modules:
         name: LIGHTTPD - 1310 loc 34% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lighttpd
       
-      - id: ninja
-        name: NINJA - 4005 loc 32% coverage
-        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=ninja
-
       - id: pycryptodome
         name: PYCRYPTODOME - 1398 loc 80% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=pycryptodome
@@ -272,10 +268,6 @@ modules:
         name: CURL
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=curl
 
-      - id: cyclonedds
-        name: CYCLONEDDS
-        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cyclonedds
-
       - id: e2fsprogs
         name: E2FSPROGS
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=e2fsprogs
@@ -292,10 +284,6 @@ modules:
         name: FILE
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=file
 
-      - id: gstreamer
-        name: GSTREAMER
-        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=gstreamer
-
       - id: guetzli
         name: GUETZLI
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=guetzli
@@ -303,10 +291,6 @@ modules:
       - id: igraph
         name: IGRAPH
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=igraph
-
-      - id: jq
-        name: JQ
-        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=jq
 
       - id: lame
         name: LAME
@@ -339,10 +323,6 @@ modules:
       - id: libxml2
         name: LIBXML2
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libxml2
-
-      - id: mbedtls
-        name: MBEDTLS
-        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=mbedtls
 
       - id: mupdf
         name: MUPDF
