@@ -1,14 +1,10 @@
 #!/opt/pwn.college/bash
-if [ "$1" = "afl" ]; then
-    . /usr/local/sbin/eafl
-    shift
-else
-    . /usr/local/sbin/e
-fi
 export PROJECT_NAME=libwebp
-export SANITIZER=$1
-[ -z "$SANITIZER" ] && export SANITIZER='none'
-cd $SRC
+/challenge/.loc_count
+cd /src
+
+rm -rf /src/$PROJECT_NAME
+rm -rf /src/libwebp-test-data
 
 #apt-get update && apt-get install -y autoconf make libtool zip
 #git clone https://chromium.googlesource.com/webm/libwebp
@@ -22,9 +18,10 @@ cp -r /opt/fuzz-targets/fuzz_seed_corpus.zip /src
 unzip fuzz_seed_corpus.zip -d libwebp-test-data/
 rm fuzz_seed_corpus.zip
 
-cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
+cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh /src/
 
-cd $SRC/libwebp
-
-sudo --preserve-env compile
-drivers
+patch -tuN /src/build.sh -i /challenge/.build.patch -r -
+cd /src/$PROJECT_NAME
+cp /home/hacker/$PROJECT_NAME/* /src/$PROJECT_NAME/tests/fuzzer
+cp /home/hacker/$PROJECT_NAME/build.sh /src
+/challenge/.fi $PROJECT_NAME
