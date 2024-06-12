@@ -1,4 +1,6 @@
 #!/opt/pwn.college/bash
+echo 35 > /tmp/initial
+echo 40 > /tmp/target
 if [ "$1" = "afl" ]; then
     . /usr/local/sbin/eafl
     shift
@@ -14,7 +16,7 @@ cd $SRC
 
 # install libsrtp dep from source
 #git clone --single-branch --branch 2_2_x_throttle https://github.com/cisco/libsrtp.git libsrtp
-cp -r /opt/fuzz-targets/libsrtp /src/
+cp -r /opt/fuzz-targets/libsrtp /src
 
 cd libsrtp && ./configure --enable-openssl && make -j$(nproc) shared_library && make install
 cd $SRC/
