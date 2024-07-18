@@ -76,10 +76,6 @@ modules:
         name: AVAHI - 2566 loc 32% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=avahi
 
-      - id: cmake
-        name: CMAKE - 7778 loc 62% coverage (no AFL)
-        description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cmake
-
       - id: elfutils
         name: ELFUTILS - 31383 loc 28% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=elfutils
