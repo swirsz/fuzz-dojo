@@ -90,7 +90,12 @@ modules:
       - id: 10-crash
         name: Diagnose Crash Files
         description: When compiling ZLIB crashes are produced. Why is this occurring? Run /challenge/training in Terminal to start.
-
+  
+  resources:
+  - name: "Fuzzing: Introduction"
+    type: lecture
+    video: K_2DAo5pPQQ
+    
   - id: projects-simple
     name: Simple Harnessing
     description: Improve a OSS-Fuzz driver by 5% or more to achieve the flag.  These projects have relatively simple fuzz drivers.
