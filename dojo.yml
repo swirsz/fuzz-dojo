@@ -95,6 +95,14 @@ modules:
       - name: "Fuzzing: Introduction"
         type: lecture
         video: K_2DAo5pPQQ
+        
+      - name: "GTAC 2016: Finding Bugs in C++ Libraries Using LibFuzzer"
+        type: lecture
+        video: FzaR3iH2iZs
+        
+      - name: "Using OSS-Fuzz to Improve the Fuzz Harness Code Coverage of BZIP2"
+        type: lecture
+        video: LUGG56LOf5U
 
   - id: projects-simple
     name: Simple Harnessing
