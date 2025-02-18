@@ -41,8 +41,6 @@ if compgen -G "/out/crash*" > /dev/null; then
     echo "Crashes detected within the /out directory!"
     echo
 fi
-cp /tmp/loc /home/hacker/.log/$(TZ=US/Arizona date +"%F--%H-%M-%S")-loc.txt
-cat /tmp/loc
 echo > /tmp/loc
 for driver in "${DRIVERS[@]}"
 do
@@ -54,6 +52,7 @@ read INITIAL < /tmp/initial
 read TARGET < /tmp/target
 echo Total >> /tmp/loc
 cat /tmp/loc
+cp /tmp/loc /home/hacker/.log/$(TZ=US/Arizona date +"%F--%H-%M-%S")-loc.txt
 /usr/local/sbin/loc-calc 
 if [ "$?" -gt "$TARGET" ]; then
     echo
