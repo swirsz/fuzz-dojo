@@ -327,7 +327,7 @@ modules:
         name: JANUS-GATEWAY - 6131 loc 37% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=janus-gateway
 
-      - id: lame
+      - id: lame (broken on OSS-Fuzz)
         name: LAME - 23539 loc 40% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lame
 
