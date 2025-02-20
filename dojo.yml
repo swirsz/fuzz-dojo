@@ -127,7 +127,7 @@ modules:
         description: Sample OSS-Fuzz project
 
       - id: exiv2
-        name: EXIV2 - 34282 loc 55% coverage (no FI report)
+        name: EXIV2 - 34282 loc 55% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=exiv2
 
       - id: guetzli
@@ -147,7 +147,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=kamailio
 
       - id: libsass
-        name: LIBSASS - 19723 loc 33% coverage
+        name: LIBSASS - 19723 loc 33% coverage (no FI)
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libsass
 
       - id: libsodium
