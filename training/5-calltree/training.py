@@ -1,3 +1,5 @@
+#!/usr/bin/exec-suid --real -- /run/workspace/bin/python
+
 #!/usr/bin/env python3
 import json
 import sys

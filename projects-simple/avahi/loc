@@ -1,13 +1,12 @@
 #!/opt/pwn.college/bash
-INITIAL=70
-TARGET=75
+INITIAL=75
+TARGET=80
 . /usr/local/sbin/e
 if [ "$1" = "none" ] || [ "$1" = "address" ] || [ "$1" = "memory" ] || [ "$1" = "undefined" ] || [ "$1" = "thread" ]; then
     export SANITIZER=$1
     shift
 fi
 [ -z "$SANITIZER" ] && export SANITIZER='none'
-cd $SRC
 cp /usr/local/lib/x86_64-unknown-linux-gnu/libc++.a /usr/local/lib/x86_64-unknown-linux-gnu/libc++.bk
 cp /usr/local/lib/x86_64-unknown-linux-gnu/libc++experimental.a /usr/local/lib/x86_64-unknown-linux-gnu/libc++experimental.bk
 /challenge/build $SANITIZER
@@ -62,3 +61,4 @@ if [ "$COVERAGE" -ge "$TARGET" ]; then
     cat /flag
     echo
 fi
+chown -hR hacker:hacker /out
