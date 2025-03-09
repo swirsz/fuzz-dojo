@@ -133,7 +133,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=exiv2
 
       - id: guetzli
-        name: GUETZLI - 5648 loc %/80%/72% coverage
+        name: GUETZLI - 5648 loc 79%/80%/72% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=guetzli
 
       - id: haproxy
