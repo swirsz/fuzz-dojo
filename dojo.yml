@@ -121,7 +121,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=avahi
 
       - id: elfutils
-        name: ELFUTILS - 31383 loc 11%/26%/40% coverage - 
+        name: ELFUTILS - 31383 loc 14%/26%/40% coverage - 2.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=elfutils
 
       - id: example
@@ -129,11 +129,11 @@ modules:
         description: Sample OSS-Fuzz project
 
       - id: exiv2
-        name: EXIV2 - 34282 loc 55%/54%/- coverage - 
+        name: EXIV2 - 34282 loc 11%/54%/- coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=exiv2
 
       - id: guetzli
-        name: GUETZLI - 5648 loc 80% coverage
+        name: GUETZLI - 5648 loc %/80%/72% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=guetzli
 
       - id: haproxy
