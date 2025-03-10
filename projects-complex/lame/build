@@ -43,6 +43,7 @@ if [ ! -d "/src-$SANITIZER" ]; then
     echo Please wait, initial setup
     cp -r /src-orig /src-$SANITIZER
 fi
+mv /src-$SANITIZER /src
 
 cd $SRC/
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then

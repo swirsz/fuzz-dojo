@@ -31,6 +31,9 @@ if [ ! -d "/src-$SANITIZER" ]; then
     cp -r /src-orig /src-$SANITIZER
 fi
 
+mv /src-$SANITIZER /src
+
+cd $SRC
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
    mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/decode_fuzzer.cc $SRC/new_fuzzer.cc

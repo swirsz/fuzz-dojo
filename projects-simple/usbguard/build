@@ -39,8 +39,9 @@ if [ ! -d "/src-$SANITIZER" ]; then
     echo Please wait, initial setup
     cp -r /src-orig /src-$SANITIZER
 fi
+mv /src-$SANITIZER /src
 
-cd $SRC/usbguard
+cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
    mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/$PROJECT_NAME$SRC/Tests/Fuzzers/fuzzer-uevent.cpp $SRC/$PROJECT_NAME$SRC/Tests/Fuzzers/fuzzer-new.cpp

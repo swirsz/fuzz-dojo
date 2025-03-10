@@ -30,7 +30,9 @@ if [ ! -d "/src-$SANITIZER" ]; then
     echo Please wait, initial setup
     cp -r /src-orig /src-$SANITIZER
 fi
-cd $SRC/libpng
+mv /src-$SANITIZER /src
+
+cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
    mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/$PROJECT_NAME/contrib/oss-fuzz/libpng_read_fuzzer.cc $SRC/$PROJECT_NAME/contrib/oss-fuzz/libpng_new_fuzzer.cc
