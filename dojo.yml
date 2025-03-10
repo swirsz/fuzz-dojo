@@ -292,7 +292,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=pcre2
 
       - id: sqlite3
-        name: SQLITE3 - 80385 loc 75% coverage
+        name: SQLITE3 - 80385 loc 33%/75%/76% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=sqlite3
         
       - id: tmux
@@ -308,7 +308,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=uriparser
 
       - id: xvid
-        name: XVID - 13782 loc 33% coverage
+        name: XVID - 13782 loc 10%/33%/- coverage - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=xvid
 
   - id: projects-complex
