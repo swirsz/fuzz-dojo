@@ -252,7 +252,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libpng
 
       - id: libssh2
-        name: LIBSSH2 - 12632 loc 30% coverage
+        name: LIBSSH2 - 12632 loc 10%/20%/26% coverage - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libssh2
 
       - id: libvnc
