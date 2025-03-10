@@ -1,4 +1,4 @@
-,#!/opt/pwn.college/bash
+#!/opt/pwn.college/bash
 if [ "$1" = "afl" ]; then
     . /usr/local/sbin/eafl
     shift
