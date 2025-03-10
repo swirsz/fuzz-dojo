@@ -220,11 +220,11 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=boost
 
       - id: bzip2
-        name: BZIP2 - 2661 loc 92% coverage
+        name: BZIP2 - 2661 loc 74%/92%/99% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=bzip2
 
       - id: c-ares
-        name: C-ARES - 5676 loc 33% coverage
+        name: C-ARES - 5676 loc 35%/39%/72% coverage - 2.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=c-ares
 
       - id: casync
