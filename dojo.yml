@@ -304,7 +304,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=unrar
 
       - id: uriparser
-        name: URIPARSER - 4606 loc 78% coverage
+        name: URIPARSER - 4606 loc 72%/81%/93% coverage - 45 sec
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=uriparser
 
       - id: xvid
