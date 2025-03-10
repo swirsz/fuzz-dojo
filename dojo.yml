@@ -256,7 +256,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libssh2
 
       - id: libvnc
-        name: LIBVNC - 10793 loc 20% coverage
+        name: LIBVNC - 10793 loc 16%/19%/22% coverage - 3.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libvnc
 
       - id: libvpx
@@ -268,7 +268,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=miniz
 
       - id: minizip
-        name: MINIZIP - 3639 loc 58% coverage
+        name: MINIZIP - 3639 loc 75%/76%/64% coverage - 45 sec
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=minizip
         
       - id: mpg123
