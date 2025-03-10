@@ -216,7 +216,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=apache-httpd
 
       - id: boost
-        name: BOOST - 11995 loc 60% coverage
+        name: BOOST - 11995 loc 42%/57%/-% coverage - 10 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=boost
 
       - id: bzip2
@@ -232,7 +232,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=casync
 
       - id: cmark
-        name: CMARK - 14688 loc 95% coverage
+        name: CMARK - 14688 loc /95%/82% coverage
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cmark
 
       - id: gfwx
