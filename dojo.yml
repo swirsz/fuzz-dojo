@@ -288,7 +288,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openssh
 
       - id: pcre2
-        name: PCRE2 - 33249 loc 82% coverage
+        name: PCRE2 - 33249 loc 57%/80%/96% coverage - 11 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=pcre2
 
       - id: sqlite3
@@ -296,11 +296,11 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=sqlite3
         
       - id: tmux
-        name: TMUX - 48752 loc 12% coverage
+        name: TMUX - 48752 loc 12%/12%/31% coverage - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=tmux
 
       - id: unrar
-        name: UNRAR - 13209 loc 15% coverage
+        name: UNRAR - 13209 loc 8%/58%/86% coverage - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=unrar
 
       - id: uriparser
