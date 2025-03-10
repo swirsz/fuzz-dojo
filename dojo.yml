@@ -260,11 +260,11 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libvnc
 
       - id: libvpx
-        name: LIBVPX - 32885 loc 60% coverage
+        name: LIBVPX - 32885 loc 54%/60%/0% coverage - 2.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libvpx
 
       - id: miniz
-        name: MINIZ - 5423 loc 47% coverage
+        name: MINIZ - 5423 loc 56%/60%/74% coverage - 30 sec
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=miniz
 
       - id: minizip
