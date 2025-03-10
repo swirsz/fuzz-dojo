@@ -10,10 +10,11 @@ export SANITIZER=$1
 [ -z "$SANITIZER" ] && export SANITIZER='none'
 
 if [ ! -d "/src-orig" ]; then
+    cd $SRC
     #apt-get update && apt-get install -y autoconf automake bison pkg-config ncurses-dev libtool
-    rm -rf libevent
-    rm -rf tmux
-    rm -rf /work
+    #rm -rf libevent
+    #rm -rf tmux
+    #rm -rf /work
     mkdir -p /work && chmod a+rwx /work
 
     #git clone https://github.com/libevent/libevent.git
