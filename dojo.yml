@@ -129,7 +129,7 @@ modules:
         description: Sample OSS-Fuzz project
 
       - id: exiv2
-        name: EXIV2 - 34282 loc 11%/54%/- coverage - 1 min
+        name: EXIV2 - 34282 loc 11%/54%/1% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=exiv2
 
       - id: guetzli
@@ -149,15 +149,15 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=kamailio
 
       - id: libsass
-        name: LIBSASS - 19723 loc 33% coverage (no FI)
+        name: LIBSASS - 19723 loc 29%/26%/4% coverage (no FI) - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libsass
 
       - id: libsodium
-        name: LIBSODIUM - 8403 loc 19% coverage
+        name: LIBSODIUM - 8403 loc 18%/19%/12% coverage - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libsodium
         
       - id: lighttpd
-        name: LIGHTTPD - 1310 loc 34% coverage
+        name: LIGHTTPD - 1310 loc 36%/35%/47% coverage - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lighttpd
       
       - id: pycryptodome
@@ -169,7 +169,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=snappy
 
       - id: usbguard
-        name: USBGUARD - 3525 loc 39% coverage (no FI)
+        name: USBGUARD - 3525 loc 39%/41%/93% coverage (no FI) - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=usbguard
 
       - id: valijson
