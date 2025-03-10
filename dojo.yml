@@ -145,7 +145,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=json
 
       - id: kamailio
-        name: KAMAILIO - 83091 loc 9% coverage (no FI)
+        name: KAMAILIO - 83091 loc 4%/10%/11% coverage (no FI) - 5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=kamailio
 
       - id: libsass
