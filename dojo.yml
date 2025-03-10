@@ -173,15 +173,15 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=usbguard
 
       - id: valijson
-        name: VALIJSON - 3566 loc 9% coverage
+        name: VALIJSON - 3566 loc 68%/72%/52% coverage - 30 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=valijson
 
       - id: vorbis
-        name: VORBIS - 8745 loc 35% coverage
+        name: VORBIS - 8745 loc 31%/35%/36% coverage - 30 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=vorbis
 
       - id: w3m
-        name: W3M - 6400 loc 70% coverage
+        name: W3M - 6400 loc 66%/70%/30% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=w3m
 
       - id: wasm3
@@ -189,19 +189,19 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=wasm3
 
       - id: woff2
-        name: WOFF2 - 3985 loc 87% coverage
+        name: WOFF2 - 3985 loc 71%/87%/89% coverage - 3 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=woff2
 
       - id: xz
-        name: XZ - 3414 loc 67% coverage
+        name: XZ - 3414 loc 69%/71%/12% coverage - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=xz
 
       - id: yara
-        name: YARA - 30443 loc 65% coverage
+        name: YARA - 30443 loc 49%/63%/43% coverage - 3 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=yara
 
       - id: zopfli
-        name: ZOPFLI - 2221 loc 92% coverage
+        name: ZOPFLI - 2221 loc 77%/94%/99% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=zopfli
 
 
