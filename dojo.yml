@@ -228,15 +228,15 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=c-ares
 
       - id: casync
-        name: CASYNC - 1678 loc 10% coverage
+        name: CASYNC - 1678 loc 11%/10%/14% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=casync
 
       - id: cmark
-        name: CMARK - 14688 loc /95%/82% coverage
+        name: CMARK - 14688 loc 81%/95%/82% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cmark
 
       - id: gfwx
-        name: GFWX - 1087 loc 84% coverage
+        name: GFWX - 1087 loc 88%/85%/-% coverage - 1.75 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=gfwx
 
       - id: igraph
@@ -244,11 +244,11 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=igraph
         
       - id: liblouis
-        name: LIBLOUIS - 10478 loc 79% coverage
+        name: LIBLOUIS - 10478 loc 36%/60%/92% coverage - 4 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=liblouis
         
       - id: libpng
-        name: LIBPNG - 13217 loc 39% coverage
+        name: LIBPNG - 13217 loc 40%/43%/57% coverage - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libpng
 
       - id: libssh2
