@@ -25,7 +25,7 @@ export SANITIZER=$1
     export CFLAGS="$CFLAGS -Wno-error=implicit-function-declaration"
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
     patch -tuN $SRC/$PROJECT_NAME/regress/misc/fuzz-harness/Makefile -i /challenge/.Makefile.patch -r -
-    echo Please wait, initial setup
+    echo Please wait, creating /src-orig
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
 #    mv /src /src-orig
 #fi

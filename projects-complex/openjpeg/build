@@ -21,12 +21,12 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/$PROJECT_NAME/tests/fuzzers/opj_decompress_fuzzer_J2K.cpp $SRC/$PROJECT_NAME/tests/fuzzers/newfuzzer.cpp
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
     patch -tuN $SRC/openjpeg/tests/fuzzers/build_seed_corpus.sh -i /challenge/.build_seed_corpus.patch -r -
-    echo Please wait, initial setup
+    echo Please wait, creating /src-orig
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi
 if [ ! -d "/src-$SANITIZER" ]; then
-    echo Please wait, initial setup
+    echo Please wait, creating /src-$SANITIZER
     cp -r /src-orig /src-$SANITIZER
 fi
 mv /src-$SANITIZER /src

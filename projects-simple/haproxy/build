@@ -21,7 +21,7 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/fuzz_cfg_parser.c $SRC/fuzz_newfuzzer.c
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
 
-    echo Please wait, initial setup
+    echo Please wait, creating /src-orig
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

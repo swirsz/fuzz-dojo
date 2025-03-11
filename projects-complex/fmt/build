@@ -21,12 +21,12 @@ if [ ! -d "/src-orig" ]; then
 
     cp $SRC/$PROJECT_NAME/test/fuzzing/one-arg.cc $SRC/$PROJECT_NAME/test/fuzzing/newfuzzer.cc
     patch -tuN $SRC/$PROJECT_NAME/test/fuzzing/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
-    echo Please wait, initial setup
+    echo Please wait, creating /src-orig
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi
 if [ ! -d "/src-$SANITIZER" ]; then
-    echo Please wait, initial setup
+    echo Please wait, creating /src-$SANITIZER
     cp -r /src-orig /src-$SANITIZER
 fi
 mv /src-$SANITIZER /src
