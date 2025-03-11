@@ -21,6 +21,7 @@ if [ ! -d "/src-orig" ]; then
 
     cp $SRC/$PROJECT_NAME/tests/fuzzing/fuzz_backtranslate.c $SRC/$PROJECT_NAME/tests/fuzzing/fuzz_newfuzzer.c
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

@@ -212,7 +212,7 @@ modules:
     challenges:
 
       - id: apache-httpd
-        name: APACHE-HTTPD - 48312 loc 14% coverage
+        name: APACHE-HTTPD - 48312 loc 12%/14%/6% coverage - 5.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=apache-httpd
 
       - id: boost
@@ -318,15 +318,15 @@ modules:
     challenges:
 
       - id: cppcheck
-        name: CPPCHECK - 79321 loc 26% coverage (no FI)
+        name: CPPCHECK - 79321 loc 20%/24%/24% coverage (no FI) - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=cppcheck
 
       - id: fmt
-        name: FMT - 5904 loc 83% coverage
+        name: FMT - 5904 loc 77%/81%/13% coverage - 4 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=fmt
 
       - id: janus-gateway
-        name: JANUS-GATEWAY - 6131 loc 37% coverage
+        name: JANUS-GATEWAY - 6131 loc 36%/37%/34% coverage - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=janus-gateway
 
       - id: lame
@@ -334,7 +334,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lame
          
       - id: openjpeg
-        name: OPENJPEG - 22939 loc 51% coverage
+        name: OPENJPEG - 22939 loc 5%/-%/4% coverage - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openjpeg
 
       - id: speex
@@ -342,10 +342,10 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=speex
 
       - id: wavpack
-        name: WAVPACK - 4172 loc 81% coverage
+        name: WAVPACK - 4172 loc 73%/84%/96% coverage - 1.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=wavpack
 
       - id: zlib
-        name: ZLIB - 5055 loc 69% coverage
+        name: ZLIB - 5055 loc 78%/79%/87% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=zlib
 

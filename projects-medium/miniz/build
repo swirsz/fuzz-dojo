@@ -18,6 +18,7 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/$PROJECT_NAME/tests/compress_fuzzer.c $SRC/$PROJECT_NAME/tests/new_fuzzer.c
     #patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

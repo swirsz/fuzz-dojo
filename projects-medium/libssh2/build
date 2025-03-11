@@ -22,6 +22,7 @@ if [ ! -d "/src-orig" ]; then
     patch -tuN $SRC/$PROJECT_NAME/tests/ossfuzz/ossfuzz.sh -i /challenge/.ossfuzz.patch -r -
     patch -tuN $SRC/$PROJECT_NAME/tests/ossfuzz/Makefile.am -i /challenge/.Makefile.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

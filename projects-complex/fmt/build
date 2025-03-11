@@ -22,6 +22,7 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/$PROJECT_NAME/test/fuzzing/one-arg.cc $SRC/$PROJECT_NAME/test/fuzzing/newfuzzer.cc
     patch -tuN $SRC/$PROJECT_NAME/test/fuzzing/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

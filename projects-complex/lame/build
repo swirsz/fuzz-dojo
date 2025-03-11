@@ -39,6 +39,7 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/LAME-fuzzers/fuzzer-encoder_seed_corpus.zip $SRC/LAME-fuzzers/fuzzer-new_seed_corpus.zip
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

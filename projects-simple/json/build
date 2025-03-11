@@ -26,6 +26,7 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/$PROJECT_NAME/tests$SRC/fuzzer-parse_ubjson.cpp $SRC/$PROJECT_NAME/tests$SRC/fuzzer-parse_new.cpp
     patch -tuN $SRC/$PROJECT_NAME/tests/Makefile -i /challenge/.Makefile.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

@@ -23,6 +23,7 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/casync/test/fuzz/fuzz-compress.c $SRC/casync/test/fuzz/fuzz-new.c
     #patch -tuN $SRC/casync/test/fuzz/meson.build -i /challenge/.build.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi

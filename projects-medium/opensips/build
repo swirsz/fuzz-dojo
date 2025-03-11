@@ -19,6 +19,7 @@ if [ ! -d "/src-orig" ]; then
 
     patch -tuN $SRC/$PROJECT_NAME/test/fuzz/oss-fuzz-build.sh -i /challenge/.oss-fuzz-build.patch -r -
     echo Please wait, initial setup
+    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi
