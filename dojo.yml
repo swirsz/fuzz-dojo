@@ -273,7 +273,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libvpx
 
       - id: miniz
-        name: MINIZ - 5423 loc 56%/60%/74% coverage - 30 sec
+        name: MINIZ - 5423 loc 56%/60%/74% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=miniz
 
       - id: minizip
@@ -285,7 +285,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=mpg123
 
       - id: mupdf
-        name: MUPDF - 289131 loc 35% coverage (no FI)
+        name: MUPDF - 289131 loc 25%/36%/-% coverage (no FI) - 12 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=mupdf
 
       - id: opensips
@@ -293,7 +293,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=opensips
 
       - id: openssh
-        name: OPENSSH - 27975 loc 35% coverage
+        name: OPENSSH - 27975 loc 25%/29%/36% coverage - 13 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openssh
 
       - id: pcre2

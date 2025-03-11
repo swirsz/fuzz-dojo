@@ -26,7 +26,6 @@ if [ ! -d "/src-orig" ]; then
     cp $SRC/$PROJECT_NAME/fuzzers/rtcp_fuzzer.c $SRC/$PROJECT_NAME/fuzzers/newfuzzer.c
 
     echo Please wait, initial setup
-    chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
     mv /src /src-orig
 fi
@@ -50,5 +49,6 @@ mkdir -p /home/hacker/.log
 [ ! "$SANITIZER" = "introspector" ] && [ ! "$SANITIZER" = "coverage" ] && zip -ry /home/hacker/.log/$(TZ=US/Arizona date +"%F--%H-%M-%S")-training-split /home/hacker/fuzz-dojo/training-split
 sudo --preserve-env compile
 drivers
+chown -hR hacker:hacker /home/hacker/fuzz-dojo
 chown -hR hacker:hacker $SRC/$PROJECT_NAME
 mv /src /src-$SANITIZER
