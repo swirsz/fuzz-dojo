@@ -186,7 +186,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=valijson
 
       - id: vorbis
-        name: VORBIS - 8745 loc 31%/35%/36% coverage - 1.5 min
+        name: VORBIS - 8745 loc 31%/35%/36% coverage - 2.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=vorbis
 
       - id: w3m
