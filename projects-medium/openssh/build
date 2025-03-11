@@ -9,7 +9,7 @@ export PROJECT_NAME=openssh
 export SANITIZER=$1
 [ -z "$SANITIZER" ] && export SANITIZER='none'
 
-if [ ! -d "/src-orig" ]; then
+#if [ ! -d "/src-orig" ]; then
     cd $SRC
     rm -rf $SRC/$PROJECT_NAME
     #apt-get update && apt-get install -y make autoconf automake libtool
@@ -28,13 +28,13 @@ if [ ! -d "/src-orig" ]; then
     echo Please wait, initial setup
     chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
-    mv /src /src-orig
-fi
-if [ ! -d "/src-$SANITIZER" ]; then
-    echo Please wait, initial setup
-    cp -r /src-orig /src-$SANITIZER
-fi
-mv /src-$SANITIZER /src
+#    mv /src /src-orig
+#fi
+#if [ ! -d "/src-$SANITIZER" ]; then
+#    echo Please wait, initial setup
+#    cp -r /src-orig /src-$SANITIZER
+#fi
+#mv /src-$SANITIZER /src
 
 cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
@@ -51,4 +51,4 @@ mkdir -p /home/hacker/.log
 sudo --preserve-env compile
 drivers
 chown -hR hacker:hacker $SRC/$PROJECT_NAME
-mv /src /src-$SANITIZER
+#mv /src /src-$SANITIZER
