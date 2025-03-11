@@ -33,8 +33,8 @@ export SANITIZER=$1
     cp /opt/oss-fuzz-new/projects/$PROJECT_NAME/pdf_fuzzer.options $SRC/new_fuzzer.options
 
     cp $SRC/pdf_fuzzer.cc $SRC/new_fuzzer.cc
-    rm -rf /out$SRC
-    cp -r $SRC /out
+    rm -rf /out/src
+    cp -r /src /out
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
 
     chown -hR hacker:hacker /home/hacker/fuzz-dojo
@@ -63,4 +63,4 @@ mkdir -p /home/hacker/.log
 sudo --preserve-env compile
 drivers
 chown -hR hacker:hacker $SRC/$PROJECT_NAME
-mv /src /src-$SANITIZER
+#mv /src /src-$SANITIZER
