@@ -18,7 +18,6 @@ if [ ! -d "/src-orig" ]; then
 
     cp $SRC/$PROJECT_NAME/fuzzing/write_all_gml.cpp $SRC/$PROJECT_NAME/fuzzing/newfuzzer.cpp
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
-    patch -tuN $SRC/igraph/fuzzing/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
     echo Please wait, initial setup
     chown -hR hacker:hacker /home/hacker/fuzz-dojo
     chown -hR hacker:hacker $SRC/$PROJECT_NAME
@@ -35,6 +34,7 @@ rm -rf $SRC/deps
 
 cp -r /opt/fuzz-targets/igraph $SRC
 cp /opt/fuzz-targets/libxml2-2.13.6.tar.xz $SRC
+patch -tuN $SRC/igraph/fuzzing/CMakeLists.txt -i /challenge/.CMakeLists.patch -r -
 
 cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
