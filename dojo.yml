@@ -279,7 +279,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=minizip
         
       - id: mpg123
-        name: MPG123 - 9826 loc 53% coverage
+        name: MPG123 - 9826 loc 39%/52%/43% coverage - 2 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=mpg123
 
       - id: mupdf
