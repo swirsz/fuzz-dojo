@@ -13,12 +13,11 @@ if [ ! -d "/src-orig" ]; then
     #apt-get update && apt-get install -y cmake bison flex
 
     #git clone --branch master  https://github.com/igraph/igraph
-    rm -rf $SRC/igraph
-    rm -rf $SRC/deps
-    rm -rf $SRC/libxml2-2.13.5
+    #rm -rf $SRC/igraph
+    #rm -rf $SRC/libxml2-2.13.6
 
     cp -r /opt/fuzz-targets/igraph $SRC
-    cp /opt/fuzz-targets/libxml2-2.13.5.tar.xz $SRC
+    cp /opt/fuzz-targets/libxml2-2.13.6.tar.xz $SRC
 
     cp $SRC/$PROJECT_NAME/fuzzing/build.sh $SRC/
 
@@ -35,6 +34,8 @@ if [ ! -d "/src-$SANITIZER" ]; then
     cp -r /src-orig /src-$SANITIZER
 fi
 mv /src-$SANITIZER /src
+
+rm -rf $SRC/deps
 
 cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
