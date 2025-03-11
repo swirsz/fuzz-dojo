@@ -37,7 +37,7 @@ if [ ! -d "/src-$SANITIZER" ]; then
 fi
 mv /src-$SANITIZER /src
 
-cd /SRC
+cd $SRC
 mkdir people.xiph.org/
 touch people.xiph.org/dummy.ogg
 
