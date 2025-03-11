@@ -338,7 +338,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openjpeg
 
       - id: speex
-        name: SPEEX - 5867 loc 35% coverage
+        name: SPEEX - 5867 loc 80%/-%/-% coverage - 4.5 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=speex
 
       - id: wavpack
