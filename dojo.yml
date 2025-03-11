@@ -161,11 +161,11 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=lighttpd
       
       - id: pycryptodome
-        name: PYCRYPTODOME - 1398 loc 80% coverage
+        name: PYCRYPTODOME - 1398 loc 80%/80%/79% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=pycryptodome
 
       - id: snappy
-        name: SNAPPY - 1502 loc 61% coverage
+        name: SNAPPY - 1502 loc 67%/67%/61% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=snappy
 
       - id: usbguard
@@ -185,7 +185,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=w3m
 
       - id: wasm3
-        name: WASM3 - 4107 loc 71% coverage
+        name: WASM3 - 4107 loc 34%/65%/22% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=wasm3
 
       - id: woff2
