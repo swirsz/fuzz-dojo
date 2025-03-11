@@ -6,13 +6,14 @@ image: stevenwirsz/fuzz-base:latest
 
 description: |
 
-  Projects are provided with a project size in lines of code, 3 code coverage percentages, and a compile time. For example: JSON - 8008 loc 68%/74%/94% coverage - 45 sec
+  Projects show a project size in lines of code, code coverage percentages, and a compile time. 
+  For example: `JSON - 8008 loc 68%/74%/94% coverage - 45 sec`
   
-  - 8008 loc - This means that  the source code for the project has 8008 lines of code
-  - 68% - This indicates that fuzzing for 30 seconds when running /challenge/loc  will explore 68% of the lines of the code of the project
-  - 74% - Google's OSS-Fuzz infrastructure performing continuous fuzzing  will explore 74% of the code
-  - 94% - static analysis shows that existing fuzz drivers have the theoretical ability to reach 94% of the code. This is not always accurate.
-  - 45 seconds - This is how long /challenge/loc requires to recalculate the code coverage report for the project when recompiling ONLY the fuzz drivers. The initial build will require more time, simply rebuilding  the fuzz drivers with /challenge/build will require less time.
+  - `8008 loc` - This means that the source code has 8008 lines of code
+  - `68%` - When fuzzing for 30 seconds after running `/challenge/loc` will explore 68% of the lines of the code of the project
+  - `74%` - Google's OSS-Fuzz infrastructure performing continuous fuzzing explores 74% of the code
+  - `94%` - static analysis shows that existing fuzz drivers have the theoretical ability to reach 94% of the code. This is not always accurate.
+  - `45 seconds` - This is how long /challenge/loc requires to recalculate the code coverage when recompiling ONLY the fuzz drivers. The initial build requires more time, simply rebuilding with /challenge/build will require less time.
 
   Useful commands:
     
