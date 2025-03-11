@@ -137,7 +137,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=guetzli
 
       - id: haproxy
-        name: HAPROXY - 106108 loc 1% coverage
+        name: HAPROXY - 106108 loc 1%/1%/2% coverage - 7 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=haproxy
 
       - id: json
