@@ -150,7 +150,7 @@ modules:
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=haproxy
 
       - id: json
-        name: JSON - 8008 loc 68%/74%/94% coverage - 45 sec
+        name: JSON - 8008 loc 68%/74%/94% coverage - 1 min
         description: Browse source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=json
 
       - id: kamailio
