@@ -1,0 +1,36 @@
+#!/opt/pwn.college/bash
+. /usr/local/sbin/e
+LABEL=$1
+PROJECT_NAME=libvnc
+SANITIZER=$1
+if [ -z "$SANITIZER" ]; then
+    SANITIZER='none'
+    LABEL='none'
+fi
+
+SRC=/src-$LABEL
+
+if [ "$LABEL" = "none" ]; then
+    FLAGS=""
+elif [ "$LABEL" = "address" ]; then
+    FLAGS=$SANITIZER_FLAGS_address
+elif [ "$LABEL" = "memory" ]; then
+    FLAGS=$SANITIZER_FLAGS_memory
+elif [ "$LABEL" = "undefined" ]; then
+    FLAGS=$SANITIZER_FLAGS_undefined
+elif [ "$LABEL" = "thread" ]; then
+    FLAGS=$SANITIZER_FLAGS_thread
+fi
+set -x
+
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC/libvncserver/test
+cp /home/hacker/fuzz-dojo/$PROJECT_NAME/CMakeLists.txt $SRC/libvncserver
+
+mv $SRC /src
+
+cd /src/libvncserver/build
+cmake --build .
+
+mv /src $SRC
+
+chown -hR hacker:hacker $SRC /home/hacker/fuzz-dojo /home/hacker/.log /out

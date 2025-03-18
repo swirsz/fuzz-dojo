@@ -9,7 +9,10 @@ else
 fi
 export PROJECT_NAME=opensips
 export SANITIZER=$1
-[ -z "$SANITIZER" ] && export SANITIZER='none'
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
 
 if [ ! -d "/src-orig" ]; then
     #apt-get update && apt-get install -y bison flex libssl-dev pkg-config
@@ -29,6 +32,7 @@ if [ ! -d "/src-$LABEL" ]; then
     cp -r /src-orig /src-$LABEL
 fi
 mv /src-$LABEL /src
+git config --global --add safe.directory /src/opensips
 
 cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then

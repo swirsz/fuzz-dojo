@@ -9,7 +9,10 @@ else
 fi
 export PROJECT_NAME=w3m
 export SANITIZER=$1
-[ -z "$SANITIZER" ] && export SANITIZER='none'
+if [ -z "$SANITIZER" ]; then
+    export SANITIZER='none'
+    export LABEL='none'$LABEL
+fi
 
 if [ ! -d "/src-orig" ]; then
     #apt-get update && apt-get install -y libgc-dev
