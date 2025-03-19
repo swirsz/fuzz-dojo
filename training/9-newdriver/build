@@ -19,10 +19,10 @@ if [ ! -d "/src-orig" ]; then
     #   apt-get install -y autoconf gettext libtool m4 automake pkg-config libexpat-dev libexpat-dev:i386
     #git clone --depth 1 https://github.com/lathiat/avahi
     #git clone --depth 1 https://github.com/swirsz/avahi
-    cp -r /opt/fuzz-targets/swavahi $SRC
+    cp -r /opt/fuzz-targets/swavahi $SRC/avahi
 
     cp /opt/oss-fuzz-new/projects/$PROJECT_NAME/build.sh $SRC/
-    cp /challenge/.fuzz-packet_seed_corpus.zip $OUT/fuzz-packet_seed_corpus.zip
+    #cp /challenge/.fuzz-packet_seed_corpus.zip $OUT/fuzz-packet_seed_corpus.zip
     
     cp $SRC/$PROJECT_NAME/fuzz/fuzz-consume-record.c $SRC/$PROJECT_NAME/fuzz/fuzz-newfuzzer.c
     patch -tuN $SRC/avahi/fuzz/oss-fuzz.sh -i /challenge/.oss-fuzz.patch -r -
@@ -38,7 +38,7 @@ mv /src-$LABEL /src
 
 cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/training-newdriver" ]; then
-   mkdir /home/hacker/fuzz-dojo/training-newdriver
+   mkdir -p /home/hacker/fuzz-dojo/training-newdriver
    cp $SRC/$PROJECT_NAME/fuzz/*.c /home/hacker/fuzz-dojo/training-newdriver
    cp /opt/oss-fuzz-new/projects/$PROJECT_NAME/build.sh /home/hacker/fuzz-dojo/training-newdriver
    chown -R hacker /home/hacker/fuzz-dojo/training-newdriver
