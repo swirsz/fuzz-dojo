@@ -7,7 +7,7 @@ else
     . /usr/local/sbin/e
     export LABEL=$1
 fi
-export PROJECT_NAME=bzip2
+export PROJECT_NAME=json
 export SANITIZER=$1
 if [ -z "$SANITIZER" ]; then
     export SANITIZER='none'
@@ -15,18 +15,16 @@ if [ -z "$SANITIZER" ]; then
 fi
 
 if [ ! -d "/src-orig" ]; then
-    rm -rf $SRC/$PROJECT_NAME
-    rm -rf $SRC/$PROJECT_NAME-tests
-    #apt-get update && apt-get install -y make autoconf automake libtool wget
-    #git clone git://sourceware.org/git/bzip2.git
-    #git clone git://sourceware.org/git/bzip2-tests.git
-    cp -r /opt/fuzz-targets/bzip2 $SRC
-    cp -r /opt/fuzz-targets/bzip2-tests $SRC
+    #RUN apt-get update && apt-get install -y cmake
+    #rm -rf $PROJECT_NAME
+    #git clone --depth 1 -b develop https://github.com/nlohmann/json.git
+    cp -r /opt/fuzz-targets/cjson $SRC
 
     cp /opt/oss-fuzz-new/projects/$PROJECT_NAME/build.sh $SRC/
-    cp /opt/oss-fuzz-new/projects/$PROJECT_NAME/*.c $SRC/
     
-    cp $SRC/bzip2_compress_target.c $SRC/newfuzzer.c
+    patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
+    cp $SRC/$PROJECT_NAME/fuzzing/cjson_read_fuzzer.c $SRC/$PROJECT_NAME/fuzzing/newfuzzer.cpp
+
     echo Please wait, creating /src-orig
     chown -hR hacker:hacker $SRC
     mv /src /src-orig
@@ -37,17 +35,16 @@ if [ ! -d "/src-$LABEL" ]; then
 fi
 mv /src-$LABEL /src
 
-cd $SRC
+cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
    mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
-   cp $SRC/*.c /home/hacker/fuzz-dojo/$PROJECT_NAME
+   cp $SRC/$PROJECT_NAME/fuzzing/* /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
    chown -R hacker /home/hacker/fuzz-dojo/$PROJECT_NAME
 else
-   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC
+   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/* $SRC/$PROJECT_NAME/fuzzing
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
-
 mkdir -p /home/hacker/.log
 [ ! "$SANITIZER" = "introspector" ] && [ ! "$SANITIZER" = "coverage" ] && zip -ry /home/hacker/.log/$(TZ=US/Arizona date +"%F--%H-%M-%S")-$PROJECT_NAME /home/hacker/fuzz-dojo/$PROJECT_NAME
 sudo --preserve-env compile
