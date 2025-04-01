@@ -1,7 +1,7 @@
 #!/opt/pwn.college/bash
 . /usr/local/sbin/e
 export LABEL=$1
-export export PROJECT_NAME=avahi
+export PROJECT_NAME=avahi
 SANITIZER=$1
 if [ -z "$SANITIZER" ]; then
     SANITIZER='none'

@@ -142,6 +142,10 @@ modules:
         type: lecture
         video: LRpm2kd9vQI
 
+      - name: "cJSON: Case Study extending 27% Static Code Coverage to 73%"
+        type: lecture
+        video: KOHb0y_Oiko
+
   - id: s
     name: Simple Fuzz Drivers
     description: Improve a OSS-Fuzz driver by 5% or more to achieve the flag.  These projects have relatively simple fuzz drivers.
@@ -153,7 +157,7 @@ modules:
         description: Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=arduinojson
 
       - id: avahi
-        name: AVAHI - 2566 loc 72%-76%-81% - 2 min
+        name: AVAHI - 2566 loc 73%-76%-81% - 2 min
         description: Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=avahi
 
       - id: cjson
