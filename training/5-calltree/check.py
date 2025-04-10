@@ -1,5 +1,3 @@
-#!/usr/bin/exec-suid --real -- /run/workspace/bin/python
-
 #!/usr/bin/env python3
 import json
 import sys
@@ -20,9 +18,9 @@ print("function should be required. Both functions should require fewer paramete
 print("than those currently implemented in training-calltree/newfuzzer.c\n")
 
 summary_file = "/out/fuzzer_stats/newfuzzer.json"
-level = 0
+returncode = 0
 target = 19
-flag = open("/flag").read().strip()
+
 try:
     with open(summary_file, "r") as fj:
         content = json.load(fj)
@@ -32,12 +30,9 @@ try:
                 if files.get('filename') == "/src/bzip2/bzlib.c":
                     func = files['summary']['functions']['covered']
                     print("{0} functions reached. ".format(str(func)))
-                    level = int(func)
+                    returncode = int(func)
 except:
     print("Missing "+summary_file)
     print("\nPlease run /challenge/loc first\n")
 
-if code > target:
-    print(flag)
-else:
-    print("Additional functions could be called higher in the calltree.  Try again.")
+exit(returncode)
