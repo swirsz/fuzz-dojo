@@ -146,6 +146,11 @@ modules:
         type: lecture
         video: KOHb0y_Oiko
 
+      - name: "OSS Fuzz Driver Development"
+        type: lecture
+        video: KDHVPqx6F1s
+        slides: 1eJ7y0pYSBVFg9cT353-IPF8FHI0AWGfpTh0vKcrlLk8
+
   - id: projects
     name: OSS-Fuzz Projects
     description: Improve a OSS-Fuzz driver by 5% or more to achieve the flag.
@@ -180,7 +185,7 @@ modules:
         name: (D) CMARK - medium 14688 loc 81%-95%-82% - 1 min
 
       - id: cppcheck
-        name: (D) CPPCHECK - complex 79321 loc 20%-24%-24% (coverage broken on oss-fuzz) - 1.5 min
+        name: (D) CPPCHECK - complex 79321 loc 20%-24%-24% (broken on oss-fuzz) - 1.5 min
 
       - id: elfutils
         name: ELFUTILS - simple 31383 loc 9%-26%-40% - 2.5 min
