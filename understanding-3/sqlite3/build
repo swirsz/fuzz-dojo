@@ -21,19 +21,19 @@ if [ ! -d "/src-orig" ]; then
     mkdir $SRC/sqlite3 && \
         cd $SRC/sqlite3 && \
         cp -r /downloads/sqlite3.tar.gz $SRC/sqlite3 && \
-        tar xzf sqlite3.tar.gz
+        tar xzf sqlite3.tar.gz > \dev\null
         #curl 'https://www.sqlite.org$SRC/tarball?uuid=trunk' -o sqlite3.tar.gz && \
         #tar xzf sqlite3.tar.gz
 
-    find $SRC/sqlite3 -name "*.test" | xargs zip $SRC/ossfuzz_seed_corpus.zip
+    find $SRC/sqlite3 -name "*.test" | xargs zip $SRC/ossfuzz_seed_corpus.zip > \dev\null
 
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/*.dict $SRC/
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/*.options $SRC/
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
     cp $SRC/sqlite3/test/ossfuzz.c $SRC/sqlite3/test/newfuzzer.c
-    cp $SRC/sqlite3/test/ossfuzz.options $SRC/sqlite3/test/newfuzzer.options
-    cp $SRC/sqlite3/test/ossfuzz_seed_corpus.zip $SRC/sqlite3/test/newfuzzer_seed_corpus.zip
-
+    #cp $SRC/sqlite3/test/ossfuzz.options $SRC/sqlite3/test/newfuzzer.options
+    #cp $SRC/sqlite3/test/ossfuzz_seed_corpus.zip $SRC/sqlite3/test/newfuzzer_seed_corpus.zip
+    cd /
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
 #----------------------------------------------------------------------
     build-cleanup
@@ -47,19 +47,23 @@ cd $SRC/$PROJECT_NAME
 if [ ! -d "/home/hacker/fuzz-dojo/$PROJECT_NAME" ]; then
    mkdir -p /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/sqlite3/test/*.c /home/hacker/fuzz-dojo/$PROJECT_NAME
-   cp $SRC/sqlite3/test/*.options /home/hacker/fuzz-dojo/$PROJECT_NAME
-   cp $SRC/sqlite3/test/*.zip /home/hacker/fuzz-dojo/$PROJECT_NAME
+   #cp $SRC/sqlite3/test/*.options /home/hacker/fuzz-dojo/$PROJECT_NAME
+   #cp $SRC/sqlite3/test/*.zip /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/sqlite3/main.mk  /home/hacker/fuzz-dojo/$PROJECT_NAME
    cp $SRC/build.sh /home/hacker/fuzz-dojo/$PROJECT_NAME
 else
-   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.zip $SRC/sqlite3/test
-   cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.options $SRC/sqlite3/test
+   #cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.zip $SRC/sqlite3/test
+   #cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.options $SRC/sqlite3/test
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/*.c $SRC/sqlite3/test
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/main.mk  $SRC/sqlite3/
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ ! -z "$2" ]; then
+    understanding $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 mv /src /src-$LABEL

@@ -17,8 +17,12 @@ if [ ! -d "/src-orig" ]; then
     #git clone --depth 1 -b develop https://github.com/madler/zlib.git
     cp -r /downloads/zlib $SRC
 
-    cp /opt/oss-fuzz/projects/$PROJECT_NAME/*_fuzzer.c* $SRC/
 
+    mv /opt/oss-fuzz/projects/$PROJECT_NAME/zlib_uncompress_fuzzer.cc /opt/oss-fuzz/projects/$PROJECT_NAME/zlib_uncompress_fuzzer.c
+    mv /opt/oss-fuzz/projects/$PROJECT_NAME/zlib_uncompress2_fuzzer.cc /opt/oss-fuzz/projects/$PROJECT_NAME/zlib_uncompress2_fuzzer.c
+    cp /opt/oss-fuzz/projects/$PROJECT_NAME/*_fuzzer.c* $SRC/
+    
+    
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
 
     cp $SRC/minigzip_fuzzer.c $SRC/new_fuzzer.c
@@ -40,7 +44,11 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ ! -z "$2" ]; then
+    understanding $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 mv /src /src-$LABEL

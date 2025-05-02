@@ -22,12 +22,7 @@ if [ ! -d "/src-orig" ]; then
 
     #git clone https://github.com/libevent/libevent.git
     cp -r /downloads/libevent $SRC
-    cd libevent && \
-    mkdir build && \
-    cd build && \
-    cmake -DEVENT__DISABLE_MBEDTLS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__LIBRARY_TYPE=STATIC ../ && \
-    make && make install
-    
+  
     #git clone --depth 1 https://github.com/tmux/tmux.git
     #git clone --depth 1 https://github.com/tmux/tmux-fuzzing-corpus.git
     cp -r /downloads/tmux $SRC
@@ -36,6 +31,7 @@ if [ ! -d "/src-orig" ]; then
     cp -r $SRC /out
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
 
+    cd /
     patch -tuN $SRC/$PROJECT_NAME/Makefile.am -i /challenge/.Makefile.patch -r -
     cp $SRC/$PROJECT_NAME/fuzz/input-fuzzer.c $SRC/$PROJECT_NAME/fuzz/new-fuzzer.c
     cp $SRC/$PROJECT_NAME/fuzz/input-fuzzer.dict $SRC/$PROJECT_NAME/fuzz/new-fuzzer.dict
@@ -61,7 +57,17 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ ! -z "$2" ]; then
+    understanding $2 $3
+else
+    cd $SRC/libevent && \
+    mkdir build && \
+    cd build && \
+    cmake -DEVENT__DISABLE_MBEDTLS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__LIBRARY_TYPE=STATIC ../ && \
+    make && make install
+    cd $SRC/$PROJECT_NAME  
+    fuzzlog
+    compile
+    drivers
+fi
 mv /src /src-$LABEL

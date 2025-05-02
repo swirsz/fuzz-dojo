@@ -20,7 +20,7 @@ if [ ! -d "/src-orig" ]; then
     cd $SRC
     cp -r /downloads/afl-testcases $SRC
 
-    zip guetzli_fuzzer_seed_corpus.zip afl-testcases/jpeg/full/images/* afl-testcases/jpeg_turbo/full/images/*
+    zip guetzli_fuzzer_seed_corpus.zip afl-testcases/jpeg/full/images/* afl-testcases/jpeg_turbo/full/images/* > /dev/null
 
     #git clone --depth=1 https://github.com/google/guetzli 
     cp -r /downloads/guetzli $SRC
@@ -47,7 +47,11 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ ! -z "$2" ]; then
+    understanding $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 mv /src /src-$LABEL

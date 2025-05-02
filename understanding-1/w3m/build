@@ -19,7 +19,6 @@ if [ ! -d "/src-orig" ]; then
 
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
 
-    cd $SRC/
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
 
     cp $SRC/$PROJECT_NAME/fuzz/fuzz-conv.c $SRC/$PROJECT_NAME/fuzz/fuzz-newfuzzer.c
@@ -40,7 +39,11 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ ! -z "$2" ]; then
+    understanding $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 mv /src /src-$LABEL
