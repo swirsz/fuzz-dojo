@@ -476,7 +476,8 @@ modules:
       - name: "Investigating a Project & Picking Functions to Fuzz"
         type: lecture
         video: OP22mPweQbU
-
+        slides: 1nJ82sezXrM9U0TWRJmCKyhaX38ySCO2v34q3kxyxZTA
+        
   - id: planning-2
     name: Planning New Fuzz Drivers MEDIUM
     description: This module aims to dive into the source code of your target program and develop a conceptual plan to create a new fuzz driver.  Now that you are familiar with the existing fuzz drivers, consider what is not currently being fuzzed.\
@@ -530,6 +531,7 @@ modules:
       - name: "Investigating a Project & Picking Functions to Fuzz"
         type: lecture
         video: OP22mPweQbU
+        slides: 1nJ82sezXrM9U0TWRJmCKyhaX38ySCO2v34q3kxyxZTA
 
   - id: planning-3
     name: Planning New Fuzz Drivers COMPLEX
@@ -572,6 +574,7 @@ modules:
       - name: "Investigating a Project & Picking Functions to Fuzz"
         type: lecture
         video: OP22mPweQbU
+        slides: 1nJ82sezXrM9U0TWRJmCKyhaX38ySCO2v34q3kxyxZTA
 
   - id: nextsteps
     name: The Next Steps
