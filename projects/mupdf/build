@@ -41,6 +41,8 @@ fi
     cp -r /src /out
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
 
+    mkdir -p /src-orig
+    cp $SRC/*.c* /src-orig
 #----------------------------------------------------------------------
     build-cleanup2
 #    mv /src /src-orig
@@ -63,7 +65,13 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 #mv /src /src-$LABEL

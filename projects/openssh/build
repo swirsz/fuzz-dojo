@@ -25,6 +25,9 @@ fi
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
     cp $SRC/$PROJECT_NAME/regress/misc/fuzz-harness/agent_fuzz.cc $SRC/$PROJECT_NAME/regress/misc/fuzz-harness/newfuzzer.cc
 
+    cd /
+    mkdir -p /src-orig/$PROJECT_NAME/regress/misc/fuzz-harness
+    cp $SRC/$PROJECT_NAME/regress/misc/fuzz-harness/*.cc /src-orig/$PROJECT_NAME/regress/misc/fuzz-harness
     export CFLAGS="$CFLAGS -Wno-error=implicit-function-declaration"
     patch -tuN $SRC/build.sh -i /challenge/.build.patch -r -
     patch -tuN $SRC/$PROJECT_NAME/regress/misc/fuzz-harness/Makefile -i /challenge/.Makefile.patch -r -
@@ -49,7 +52,13 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 #mv /src /src-$LABEL

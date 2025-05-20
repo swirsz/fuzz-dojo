@@ -34,7 +34,7 @@ if [ ! -d "/src-orig" ]; then
     # This is to fix Fuzz Introspector build by using LLVM old pass manager
     # re https://github.com/ossf/fuzz-introspector/issues/305
     export OLD_LLVMPASS=1
-
+    cd /
     cp /opt/oss-fuzz/projects/$PROJECT_NAME/build.sh $SRC/
 
     cp $SRC/LAME-fuzzers/fuzzer-encoder.cpp $SRC/LAME-fuzzers/fuzzer-new.cpp
@@ -60,7 +60,13 @@ else
    cp /home/hacker/fuzz-dojo/$PROJECT_NAME/build.sh $SRC
 fi
 #----------------------------------------------------------------------
-fuzzlog
-compile
-drivers
+if [ "$4" = "understanding" ]; then
+    understanding $2 $3
+elif [ "$4" = "planning" ]; then
+    planning $2 $3
+else
+    fuzzlog
+    compile
+    drivers
+fi
 mv /src /src-$LABEL
