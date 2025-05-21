@@ -171,14 +171,11 @@ modules:
       - id: alembic
         name: ALEMBIC - medium 12569 loc 1%-9%-0% - 1 min (slow FI)
         
-      - id: ampproject
-        name: ampproject
-
       - id: args
         name: ARGS - simple 1796 loc 22%-22%-47% - 3 min
 
       - id: aspell
-        name: aspell
+        name: ASPELL - complex 14514 loc 58%-68%-26% - 2 min
 
       - id: astc-encoder
         name: astc-encoder
@@ -401,6 +398,6 @@ modules:
 
     resources:
  
-      - name: "The Next Steps - submitting your fuzz driver to Google"
+      - name: "Submitting your fuzz driver to Google"
         type: lecture
         slides: 1wY-6xqYhhzf4uf272UMjHPh8KZ4sc1fjgcKuGrsa4ks
