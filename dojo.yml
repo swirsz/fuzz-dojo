@@ -171,7 +171,7 @@ modules:
         description:  Run /challenge/run in Terminal to start.
 
   - id: research-oss
-    name: User Study (OSS-Fuzz)
+    name: Study Projects (OSS-Fuzz)
     
     challenges:
 
@@ -191,7 +191,7 @@ modules:
         name: Level 3 Project (OSS-Fuzz)
 
   - id: research-fd
-    name: User Study (Fuzz Dojo)
+    name: Study Projects (Fuzz Dojo)
     
     challenges:
 
