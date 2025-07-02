@@ -9,13 +9,21 @@ image: stevenwirsz/fuzz-dojo:latest
 
 description: |
 
+        Steps:
+        1. Complete Initial Survey
+        2. Consent Challenge
+        3. View Lectures and Reference
+        4. Run /challenge/comments and /challenge/plan
+        5. Improve a OSS-Fuzz project code coverage by 5% or more to achieve the flag.
+        6. Complete Exit Survey
+
 modules:
           
   - id: help
-    name: Lectures and Reading (Reference)
+    name: Lectures and Reference
     description: |
 
-        Improve a OSS-Fuzz driver by 5% or more to achieve the flag.
+        Improve a OSS-Fuzz project code coverage by 5% or more to achieve the flag.
 
         Projects show a project size in lines of code, code coverage percentages, and a compile time. 
 
