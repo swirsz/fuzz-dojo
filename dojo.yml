@@ -15,9 +15,9 @@ description: |
         
         Step 2: Complete the `Consent Form` (see modules below)
         
-        Step 3: Complete `Set A Projects` (OSS-Fuzz) and `Set B Projects` (Fuzz Dojo). You may go back and forth between the two sets but advancement to the next level can only occur after the previous level has been completed.
+        Step 3: Complete `Set A Projects` (OSS-Fuzz) and `Set B Projects` (Fuzz Dojo). You may go back and forth between the two sets and revisit projects but advancement to the next level project can only occur after the previous level has been completed.
 
-        For each study project, first run `/challenge/comments` , then run `/challenge/plan` and then create a new fuzz driver to improve the project's code coverage. A flag is awarded when the code coverage is improved by 5% or more.
+        For each study project, first run `/challenge/comments` , then run `/challenge/plan` and then create a new fuzz driver to improve the project's code coverage. A flag is awarded when the code coverage is improved by 5% or more. Participants are encouraged to improve the code as much as possible within the study duration.  
 
         See `References Material` for help if needed. Optional practice projects are provided under `Training Exercises`.
 
