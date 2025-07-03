@@ -4,7 +4,7 @@ name: Fuzz Dojo
 
 award:
   emoji: 🥼
-  
+
 image: stevenwirsz/fuzz-dojo:latest
 
 description: |
@@ -12,20 +12,19 @@ description: |
         Welcome and thank you for your participation in this study which advances cybersecurity research. Your help is greatly appreciated. Those who complete level 3 for both project sets will automatically be entered into a random drawing for a study prize. (To be considered for the prize please provide your contact email or phone number in the initial survey.)
 
 
-		
-		Step 1: Complete Initial Survey https://forms.gle/FWF1iEn9pLpkRMGq9
-        
+        Step 1: Complete Initial Survey https://forms.gle/FWF1iEn9pLpkRMGq9
+
         Step 2: Complete the Consent Challenge
-        
+
         Step 3: For each study project, first run `/challenge/comments` and then run `/challenge/plan` and then create a new fuzz driver to improve the project's code coverage. A flag is awarded when the code coverage is improved by 5% or more.
-		
-		Using the reference information and practice exercises as necessary, complete all study projects in both sets of challenges in any order.  You may go back and forth between the two sets, but you cannot advance to the next level until the previous level has been completed.
+
+        Using the reference information and practice exercises as necessary, complete all study projects in both sets of challenges in any order.  You may go back and forth between the two sets, but you cannot advance to the next level until the previous level has been completed.
 
         The objective is to complete level 3 projects for both sets. Those who do so successfully will automatically be entered into a randomized drawing for a study prize.  (One prize will be awarded at study completion. Participants who do not respond to email or text within 24 hours will forfeit the prize to the next selected study participant).
-		
-		Step 4: Complete Exit Survey https://forms.gle/uG8yik8pXFRXQHSGA
-		
-		All entries must be submitted by xxxxxxx.
+
+        Step 4: Complete Exit Survey https://forms.gle/uG8yik8pXFRXQHSGA
+
+        All entries must be submitted by xxxxxxx.
 
 modules:
           
