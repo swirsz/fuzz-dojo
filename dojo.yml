@@ -3,7 +3,7 @@ id: fuzz
 name: Fuzz Dojo
 
 award:
-  emoji: 🥼
+  emoji: 🐇
 
 image: stevenwirsz/fuzz-dojo:latest
 
@@ -17,7 +17,7 @@ description: |
         
         - `Step 3:` Complete `Set A Projects` (OSS-Fuzz) and `Set B Projects` (Fuzz Dojo) in any order. You may go back and forth between the two sets and revisit projects but advancement to the next level project within a set can only occur after the previous level has been completed.
 
-            For each study project, first run `/challenge/comments` , then run `/challenge/plan` and then create a new fuzz driver to improve the project's code coverage. A flag is awarded when the code coverage is improved by 5% or more. Participants are encouraged to improve the code as much as possible within the study duration, and projects may be revisited to continue optimization. 
+            For each study project, after reading the suggestions in `/challenge/DESCRIPTION.md`, first run `/challenge/comments` , then run `/challenge/plan` and then create a new fuzz driver to improve the project's code coverage. A flag is awarded when the code coverage is improved by 5% or more. Participants are encouraged to improve the code as much as possible within the study duration, and projects may be revisited to continue optimization. 
 
             See `Videos and Reference` to get started. Optional practice projects to demonstrate additional techniques to gain code coverage are provided under `Training Exercises`.
 
@@ -40,48 +40,8 @@ modules:
         name: Consent
         description:  Run /challenge/run in Terminal to start.
 
-  - id: research-oss
-    name: Set A Projects OSS-Fuzz
-    
-    challenges:
-
-      - id: level0-oss
-        name: Level 0 Project (OSS-Fuzz)
-
-      - id: level1-oss
-        progression_locked: true
-        name: Level 1 Project (OSS-Fuzz)
-
-      - id: level2-oss
-        progression_locked: true
-        name: Level 2 Project (OSS-Fuzz)
-
-      - id: level3-oss
-        progression_locked: true
-        name: Level 3 Project (OSS-Fuzz)
-
-  - id: research-fd
-    name: Set B Projects Fuzz Dojo
-    
-    challenges:
-
-      - id: level0-fd
-        name: Level 0 Project (Fuzz Dojo)
-
-      - id: level1-fd
-        progression_locked: true
-        name: Level 1 Project (Fuzz Dojo)
-
-      - id: level2-fd
-        progression_locked: true
-        name: Level 2 Project (Fuzz Dojo)
-
-      - id: level3-fd
-        progression_locked: true
-        name: Level 3 Project (Fuzz Dojo)
-
-  - id: help
-    name: Videos and Reference
+  - id: training
+    name: Training
     description: |
 
         Improve a OSS-Fuzz project code coverage by 5% or more to achieve the flag.
@@ -179,6 +139,8 @@ modules:
         - [**OSS-Fuzz**: Interesting fuzz driver creation case studies](https://github.com/ossf/fuzz-introspector/blob/main/doc/CaseStudies.md)
         - [**GITHUB**: How to contribute to a project through forking](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
         - [Keyword Search all OSS-Fuzz fuzz drivers](https://github.com/search?q=repo%3Agoogle%2Foss-fuzz+path%3A%2F%5Eprojects%5C%2F%2F++AND+%28language%3AC%2B%2B+OR+language%3AC%29&type=code)
+        
+        The challenges below will demonstrate techniques to improve the code coverage of existing fuzz drivers
 
     resources:
         
@@ -224,10 +186,6 @@ modules:
         type: lecture
         slides: 1wY-6xqYhhzf4uf272UMjHPh8KZ4sc1fjgcKuGrsa4ks
 
-  - id: training
-    name: Training Exercises (optional)
-    description: Learn techniques to improve the code coverage of existing fuzz drivers
-
     challenges:
 
       - id: 1-locate
@@ -269,3 +227,44 @@ modules:
       - id: 10-crash
         name: Diagnose Crash Files
         description: When compiling ZLIB crashes are produced. Why is this occurring? Run /challenge/training in Terminal to start.
+
+  - id: research-oss
+    name: Set A Projects OSS-Fuzz
+    
+    challenges:
+
+      - id: level0-oss
+        name: Level 0 Project (OSS-Fuzz)
+
+      - id: level1-oss
+        progression_locked: true
+        name: Level 1 Project (OSS-Fuzz)
+
+      - id: level2-oss
+        progression_locked: true
+        name: Level 2 Project (OSS-Fuzz)
+
+      - id: level3-oss
+        progression_locked: true
+        name: Level 3 Project (OSS-Fuzz)
+
+  - id: research-fd
+    name: Set B Projects Fuzz Dojo
+    
+    challenges:
+
+      - id: level0-fd
+        name: Level 0 Project (Fuzz Dojo)
+
+      - id: level1-fd
+        progression_locked: true
+        name: Level 1 Project (Fuzz Dojo)
+
+      - id: level2-fd
+        progression_locked: true
+        name: Level 2 Project (Fuzz Dojo)
+
+      - id: level3-fd
+        progression_locked: true
+        name: Level 3 Project (Fuzz Dojo)
+
