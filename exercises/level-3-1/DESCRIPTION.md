@@ -1,0 +1,1 @@
+Medium Difficulty Project - see /challenge/DESCRIPTION.md for details
