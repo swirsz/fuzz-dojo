@@ -1,14 +1,8 @@
-###
-### Welcome to a Fuzz Dojo Challenge
-###
-
-KAMAILIO - simple 83091 loc 4%-10%-11% (no FI) - 5 min
-
-Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=kamailio
+Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=casync
 
 Fuzz Introspector
-https://storage.googleapis.com/oss-fuzz-introspector/kamailio/inspector-report/20250411/fuzz_report.html
+https://storage.googleapis.com/oss-fuzz-introspector/casync/inspector-report/20250411/fuzz_report.html
 
-Kamailio is used by large Internet Service Providers to provide public telephony service as a SIP Server.
+casync is a Content Addressable Data Synchronizer, a tool that combines the rsync algorithm with content addressable storage.
 
-It currently uses 2 fairly simple fuzz drivers with 10% total code coverage.   There are many unfuzzed functions with huge unreached code complexity such as "main2" & "yyparse"
+This projects has a single fuzz driver that compresses and decomposes a stream of random data, but only hits 10% of the project code. Many different compression options, such as XZ and LibZ are not called, and none of the utility functions are executed.  The github project page lists a number of operations that could be implemented in fuzz drivers.  https://github.com/systemd/casync

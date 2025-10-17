@@ -1,12 +1,8 @@
-###
-### Welcome to a Fuzz Dojo Challenge
-###
-
-LIBVPX - medium 32885 loc 54%-60%-0% - 2.5 min
-
-Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libvpx
+Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=snappy
 
 Fuzz Introspector
-https://storage.googleapis.com/oss-fuzz-introspector/libvpx/inspector-report/20250411/fuzz_report.html
+https://storage.googleapis.com/oss-fuzz-introspector/snappy/inspector-report/20250411/fuzz_report.html
 
-Libvpx is a free software video codec library that serves as the reference software implementation for the VP8 and VP9 video coding formats, and for AV1.  It has 2 decoding fuzz drivers, one for VP8 and another for VP9 that reaches 60% of the code.  The source code includes hundreds of unit tests in /test and additional code under /examples that could be turned into new fuzz drivers.
+Snappy is a compression tool optimized for high speeds and reasonable compression rates.  2 existing fuzz drivers for compression and decompression currently reach about 67% of the code.
+
+Many IOVec fuctions (a collection of memory regions) are not covered.

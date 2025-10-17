@@ -2,13 +2,13 @@
 ### Welcome to a OSS-Fuzz Challenge
 ###
 
-EXIV2 - simple 34282 loc 10%-54%-1% - 1 min
+GUETZLI - simple 5648 loc 79%-80%-72% - 1 min
 
-Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=exiv2
+Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=guetzli
 
 Fuzz Introspector
-https://storage.googleapis.com/oss-fuzz-introspector/exiv2/inspector-report/20250411/fuzz_report.html
+https://storage.googleapis.com/oss-fuzz-introspector/guetzli/inspector-report/20250411/fuzz_report.html
 
-Exiv2 is a command line utility to manage image metadata - roughly 60% coverage from a single fuzz driver that does the basic functionality of opening reading and printing image metadata. Lots of source code files appear to have low code coverage. Documentation on https://exiv2.org/doc/index.html gives examples of many features beyond the basic "read exif data" that probably are not implemented by fuzz drivers such as:
+Guetzli is a JPEG encoder/image compression - 80% coverage, the single fuzz driver has large missing functionality for downsampling images.
 
-Iptcprint is a similar example to print IPTC data. Addmoddel shows how to add, modify and delete Exif metadata. Exifcomment shows how to set the exif comment of an image. Xmpsample.cpp contains examples of how to set various types of XMP properties. For more real-world code have a look at the implementation of the different actions of the Exiv2 utility (actions.cpp).
+preprocess_downsample.cc has a 0% coverage.  It also does not look like it does JPEG encoding as jpeg_data_encoder.cc also has 0% coverage.  Compare, heat map, and many miscellaneous functions are not covered.

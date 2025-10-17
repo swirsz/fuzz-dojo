@@ -2,13 +2,15 @@
 ### Welcome to a Fuzz Dojo Challenge
 ###
 
-LIBSASS - simple 19723 loc 29%-26%-4% (no FI) - 1 min
+OPENJPEG - complex 22939 loc 5%--%-4% - 2 min
 
-Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=libsass
+Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openjpeg
 
 Fuzz Introspector
-https://storage.googleapis.com/oss-fuzz-introspector/libsass/inspector-report/20250411/fuzz_report.html
+https://storage.googleapis.com/oss-fuzz-introspector/openjpeg/inspector-report/20240911/fuzz_report.html
 
-Libsaas is a C++ port of the original Ruby Sass CSS compiler with a C API.  
+https://storage.googleapis.com/oss-fuzz-introspector/openjpeg/inspector-report/20250411/fuzz_report.html
 
-This project has 30% total code coverage.  Currently has a single partially broken fuzz driver. There are lots of parsing functions with no code coverage. Likely to need a good CSS dictionary/corpus for effective fuzzing.
+OpenJPEG is an open-source JPEG 2000 codec written in C language.  It consists of two libraries, one for implementing JPEG 2000 files and also a client/server architecture for remote browsing of JPEG 2000 images known as jpip.  The project reached 52% code coverage in 2024 with 2 fuzz drivers, one fuzz driver for each library, however a more recent change has broken the code coverage details of the project.
+
+This project is highly dependent on corpus data to exercise functionality.   Important functions in j2k.c and jp2.c are not currently being covered, such as comparisons and encoding functions. A tests folder contains many operations that are not currently implemented as fuzz drivers.

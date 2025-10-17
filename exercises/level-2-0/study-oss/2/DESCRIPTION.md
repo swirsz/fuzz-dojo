@@ -1,14 +1,16 @@
 ###
-### Welcome to a OSS-Fuzz Challenge
+### Welcome to a Fuzz Dojo Challenge
 ###
 
-GUETZLI - simple 5648 loc 79%-80%-72% - 1 min
+OPENJPEG - complex 22939 loc 5%--%-4% - 2 min
 
-Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=guetzli
+Use (Report link) to browse the source code and fuzz introspector report https://introspector.oss-fuzz.com/project-profile?project=openjpeg
 
 Fuzz Introspector
-https://storage.googleapis.com/oss-fuzz-introspector/guetzli/inspector-report/20250411/fuzz_report.html
+https://storage.googleapis.com/oss-fuzz-introspector/openjpeg/inspector-report/20240911/fuzz_report.html
 
-Guetzli is a JPEG encoder/image compression - 80% coverage, the single fuzz driver has large missing functionality for downsampling images.
+https://storage.googleapis.com/oss-fuzz-introspector/openjpeg/inspector-report/20250411/fuzz_report.html
 
-preprocess_downsample.cc has a 0% coverage.  It also does not look like it does JPEG encoding as jpeg_data_encoder.cc also has 0% coverage.  Compare, heat map, and many miscellaneous functions are not covered.
+OpenJPEG is an open-source JPEG 2000 codec written in C language.  It consists of two libraries, one for implementing JPEG 2000 files and also a client/server architecture for remote browsing of JPEG 2000 images known as jpip.  The project reached 52% code coverage in 2024 with 2 fuzz drivers, one fuzz driver for each library, however a more recent change has broken the code coverage details of the project.
+
+This project is highly dependent on corpus data to exercise functionality.   Important functions in j2k.c and jp2.c are not currently being covered, such as comparisons and encoding functions. A tests folder contains many operations that are not currently implemented as fuzz drivers.
