@@ -15,7 +15,7 @@ description: |
 
         You will learn in this dojo how to create and improve fuzz testing drivers for real-world software.  You will have access to a wide array of training materials and have the opportunity to create two new real fuzz drivers, with the option to submit your work to Google for a monetary compensation of up to $10,000.  New fuzz drivers should increase the overall project code coverage, cover a wide range of API functions and data dependencies, and achieve a good speed of executions/sec.
         
-        This is a programming challenge.  Fuzz drivers typically are between 30 to 200 LOC.
+        This is a programming challenge.  Fuzz drivers for these real-world challenges are typically are between 30 to 200 LOC.
 
         The first 30 participants to complete the module and the surveys will be rewarded with a $50 Amazon gift card upon completion of the study.  Valid contact information required.  Limit 1 submission per person.
         
