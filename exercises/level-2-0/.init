@@ -22,8 +22,7 @@ study = 'fd' if Dojo_User_Id % 2 == 1 else 'oss'
 #C 0
 #G 1
 #O 2
-#S 3
-#U 4
+#U 3
 
 
 path = Path(f'/challenge/study-{study}')
@@ -39,9 +38,9 @@ exclude = random.randint(0, count-1)
 #no more openjpeg fd-only oss
 
 
-if exclude in [3, 2]:
+if exclude in [2]:
     study = 'oss'
-elif exclude in [0, 1, 4]:
+elif exclude in [0, 1, 3]:
     study = 'fd'
 
 #path = Path(f'/challenge/study-{study}-{difficulty}')
