@@ -34,11 +34,11 @@ exclude = random.randint(0, count-1) #level
 #testing
 #exclude = 4
 
+# Note here exclude is project 1 not project 2!
 
-
-if exclude in [3, 2]:
+if exclude in [0, 1, 4]:
     study = 'oss'
-elif exclude in [0, 1, 4]:
+elif exclude in [2, 3]:
     study = 'fd'
 
 #path = Path(f'/challenge/study-{study}-{difficulty}')
