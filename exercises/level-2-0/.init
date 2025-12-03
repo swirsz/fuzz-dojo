@@ -24,7 +24,7 @@ study = 'fd' if random.randint(0,1) == 1 else 'oss'
 #O 2
 #S 3
 #U 4
-filename = f"{Dojo_User_Id}.txt"
+filename = f"/challenge/{Dojo_User_Id}.txt"
 with open(filename, "w") as f:
     f.write("File created successfully.")
     
