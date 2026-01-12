@@ -11,6 +11,8 @@ description: |
 
         Forum link: https://discord.com/channels/750635557666816031/1409993436328759328
 
+        * Jan 12, 2025 update: 30 individuals have completed the study, and there are no remaining gift cards available.
+
         * Dec 5, 2025 update: 20 individuals have completed the study, and 10 gift cards ($50) are still available.
 
         Fuzzing is a powerful automated technique that feeds a program many unexpected or malformed inputs and monitors it for crashes, hangs, or other anomalous behavior.  The Fuzz Dojo is a training program developed by an ASU PhD student to help you design and implement fuzz drivers via an online platform that streamlines the process. This program is part of a research study examining the effectiveness of these teaching tools. You’ll also gain hands-on experience with OSS-Fuzz, Google’s large-scale continuous fuzzing infrastructure for open-source software, giving you direct insight into real-world bug-finding workflows. OSS-Fuzz has been used successfully in over a thousand projects.  However, due to its limitations, only about 30% of the code is typically tested, leaving 70% unevaluated, which presents a significant opportunity for improvement.
@@ -33,7 +35,7 @@ description: |
         
         To see how many people have completed the study, open the "Real World Fuzzing" module below and check on the "All-Time" scoreboard how many people have a score of 4.  
         
-        In the interest of this study's integrity, please refrain from exploiting any bugs or vulnerabilities discovered during testing.
+        In the interest of this study's integrity, please refrain from exploiting any bugs or vulnerabilities in the platform discovered during testing.
 
 modules:
 
